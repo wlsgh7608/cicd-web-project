@@ -15,12 +15,10 @@ public class WelcomeController {
 
     @GetMapping("/")
     public String index(Model model) {
-        System.out.println("프린트 값 추가 ");
         logger.debug("Welcome to njonecompany.com...");
 
         model.addAttribute("msg", getMessage());
         model.addAttribute("today", new Date());
-        System.out.println(model.getAttribute("today"));
         return "index";
 
     }
